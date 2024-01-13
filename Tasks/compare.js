@@ -1,17 +1,23 @@
-
-// Step 3
-// Removed unnecessary conditions in the internal loop
+// Step 4: Improved code simplicity
+//Removed the unnecessary variable areEqual and simplified the return statement using every
+//changed let to const if possible
 const compareDictionaries = (firstDictionary, ...otherDictionaries) => {
   const secondDictionary = otherDictionaries[0];
-  let keysFirst = Object.keys(firstDictionary);
-  let keysSecond = Object.keys(secondDictionary);
-  if (keysFirst.join('-') !== keysSecond.join('-')) return false;
-  let areEqual = true;
-  for (const key of keysFirst) {
-    areEqual = areEqual && (firstDictionary[key] === secondDictionary[key]);
+  const keysFirst = Object.keys(firstDictionary);
+  const keysSecond = Object.keys(secondDictionary);
+
+  if (keysFirst.join('-') !== keysSecond.join('-')) {
+    return false;
   }
-  return areEqual;
+
+  return keysFirst.every(key => firstDictionary[key] === secondDictionary[key]);
 };
 
 module.exports = compareDictionaries;
+
+
+
+
+
+
 
