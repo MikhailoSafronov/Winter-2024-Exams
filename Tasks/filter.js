@@ -1,21 +1,18 @@
 // Filter array by type name
-//Step 2
-// Add "use strict"
-//Add const and let
-'use strict'
+//Step 3
+//Removed the unnecessary remove array
+//Used the filter method directly to create a new array with elements that satisfy the condition
+
+'use strict';
+
 const filterByType = (array, typeName) => {
-  const remove = [];
-  for (const element of array) {
-    const index= array.indexOf(element);
-    if (typeof array[index] !== typeName) {
-      remove.unshift(index);
-    }
-  }
-  for (const index of remove) array.splice(index, 1);
-  return array;
+  const filteredArray = array.filter((element) => typeof element === typeName);
+  return filteredArray;
 };
 
 module.exports = filterByType;
+
+
 
 
 
