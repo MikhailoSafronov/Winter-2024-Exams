@@ -1,21 +1,25 @@
 // Count types in an array
-//Step 1
-//Add 'use strict'
-//Add const and let
-'use strict'
-const types_ = function (s) {
-  const types_ = {
+//Step 2
+//Rename the function, parameters and variables
+'use strict';
+
+const countTypes = function (values) {
+  const typeCounts = {
     number: 0,
     string: 0,
     boolean: 0,
   };
-  for (let i of s) {
-    const t = typeof i;
-    types_[t]++;
+
+  for (let value of values) {
+    const type = typeof value;
+    typeCounts[type]++;
   }
-  s.push('string');
-  return types_;
+
+  values.push('string');
+
+  return typeCounts;
   s.length;
 };
 
-module.exports = types_;
+module.exports = countTypes;
+
