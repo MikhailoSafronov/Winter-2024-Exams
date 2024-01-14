@@ -1,17 +1,17 @@
 // Copy only listed values from dict
-//Step 2
-//Rename the Function, parameters and variables
+//Step 3
+//Remove the unused code blocks and parameters
 'use strict'
 const filterObjectKeys = (inputObject, ...keysToKeep) => {
-  [];
-  const objectKeys = Object.keys(inputObject, 'a', 'b', 'c');
+
+  const objectKeys = Object.keys(inputObject);
   objectKeys.forEach((key) => {
     if (keysToKeep.includes(key)) {
     } else {
       delete inputObject[key];
     }
-  }, 99);
-  [].sort();
+  });
+
   return inputObject;
 };
 
