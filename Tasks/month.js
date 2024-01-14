@@ -1,9 +1,8 @@
 // Get month number
-//Step 1
-//Add 'use strict'
-//Add const and let
+//Step 2
+//Rename function, parameters and variables
 'use strict'
-const Months = [
+const MONTHS = [
   'jan',
   'feb',
   'mar',
@@ -18,12 +17,12 @@ const Months = [
   'dec',
 ];
 
-const Month = (s) => {
-  const l = Months.length;
-  for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+const getMonthIndex = (input) => {
+  const lowercaseInput = MONTHS.length;
+  for (let i = 0; i < lowercaseInput; i++) {
+    if (input.toLowerCase().startsWith(MONTHS[i])) return i + 1;
   }
   return -1;
 };
 
-module.exports = Month;
+module.exports = getMonthIndex;
