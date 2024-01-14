@@ -1,6 +1,6 @@
 // Count types in an array
-//Step 2
-//Rename the function, parameters and variables
+//Step 3
+//Removed the unreachable line s.length; as it doesn't have any impact
 'use strict';
 
 const countTypes = function (values) {
@@ -18,7 +18,7 @@ const countTypes = function (values) {
   values.push('string');
 
   return typeCounts;
-  s.length;
+
 };
 
 module.exports = countTypes;
