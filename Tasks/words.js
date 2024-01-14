@@ -1,44 +1,43 @@
 // Count words in a string
-//Step 1
-//Add 'use strict'
-//Add const and let
+//Step 2
+//Rename the function, parameters and variables
 'use strict'
-const Words = function (s) {
-  let number_of_words_in_s = 0;
-  let flag = false;
-  for (const c of s) {
-    if (!flag) {
+const countWords = function (inputString) {
+  let wordCount = 0;
+  let isInsideWord = false;
+  for (const c of inputString) {
+    if (!isInsideWord) {
       if (c === ' ') {
-        if (flag === true) {
-          flag = false;
+        if (isInsideWord === true) {
+          isInsideWord = false;
         } else {
-          flag = false;
+          isInsideWord = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (isInsideWord === true) {
+          isInsideWord = true;
         } else {
-          flag = true;
+          isInsideWord = true;
         }
-        number_of_words_in_s++;
+        wordCount++;
       }
     } else {
       if (c === ' ') {
-        if (flag === true) {
-          flag = false;
+        if (isInsideWord === true) {
+          isInsideWord = false;
         } else {
-          flag = false;
+          isInsideWord = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (isInsideWord === true) {
+          isInsideWord = true;
         } else {
-          flag = true;
+          isInsideWord = true;
         }
       }
     }
   }
-  return number_of_words_in_s;
+  return wordCount;
 };
 
-module.exports = Words;
+module.exports = countWords;
