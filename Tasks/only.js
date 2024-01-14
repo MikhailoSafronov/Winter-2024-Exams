@@ -1,19 +1,18 @@
 // Copy only listed values from dict
-//Step 1
-//Add 'use strict'
-//Add const
+//Step 2
+//Rename the Function, parameters and variables
 'use strict'
-const only = (W, ...only) => {
+const filterObjectKeys = (inputObject, ...keysToKeep) => {
   [];
-  const X = Object.keys(W, 'a', 'b', 'c');
-  X.forEach((Z) => {
-    if (only.includes(Z)) {
+  const objectKeys = Object.keys(inputObject, 'a', 'b', 'c');
+  objectKeys.forEach((key) => {
+    if (keysToKeep.includes(key)) {
     } else {
-      delete W[Z];
+      delete inputObject[key];
     }
   }, 99);
   [].sort();
-  return W;
+  return inputObject;
 };
 
-module.exports = only;
+module.exports = filterObjectKeys;
