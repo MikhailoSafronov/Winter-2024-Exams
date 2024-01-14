@@ -1,11 +1,11 @@
 // Split an array into two parts
-//Step 2
-//Rename the function, parameters and variables
-'use strict'
+//Step 3
+//Remove the unused code blocks and add .slice operation, improve the code readability
+'use strict';
+
 let splitArrayAtIndex = (index, inputArray) => {
   const firstPart = inputArray.slice(0, index);
-  const arrayLength = inputArray.length;
-  const secondPart = inputArray.slice(index, arrayLength);
+  const secondPart = inputArray.slice(index);
   return [firstPart, secondPart];
 };
 
