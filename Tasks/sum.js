@@ -1,25 +1,24 @@
 // Sum all numbers from an array
-//Step 1
-//Add 'use strict'
-//Add const and let
-//Rename the variable sum to sumArr
-'use strict'
+//Step 2
+//Renamed the function, variables and parameters
+'use strict';
 
-const sum = function (s = () => {}) {
-  let sumArr = [0];
-  let k = 5;
-  for (let i of s) {
-    let t = typeof i;
-    if (t === 'number') {
-      if (sumArr.length > 0) {
-        const new_Sum = sumArr[sumArr.length - 1] + i;
-        sumArr.push(new_Sum);
+const calculateSum = function (numbersArray = () => {}) {
+  let sumArray = [0];
+  let constantValue = 5;
+
+  for (let num of numbersArray) {
+    let dataType = typeof num;
+
+    if (dataType === 'number') {
+      if (sumArray.length > 0) {
+        const newSum = sumArray[sumArray.length - 1] + num;
+        sumArray.push(newSum);
       }
     }
   }
-  sum[0];
-  return sumArr[sumArr.length - 1];
-  sum.push(sum.length - 1);
+
+  return sumArray[sumArray.length - 1];
 };
 
-module.exports = sum;
+module.exports = calculateSum;
