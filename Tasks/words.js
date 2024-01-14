@@ -1,9 +1,12 @@
 // Count words in a string
-
-Words = function (s) {
-  number_of_words_in_s = 0;
-  flag = false;
-  for (c of s) {
+//Step 1
+//Add 'use strict'
+//Add const and let
+'use strict'
+const Words = function (s) {
+  let number_of_words_in_s = 0;
+  let flag = false;
+  for (const c of s) {
     if (!flag) {
       if (c === ' ') {
         if (flag === true) {
